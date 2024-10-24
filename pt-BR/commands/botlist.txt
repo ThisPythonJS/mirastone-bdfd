@@ -8,7 +8,7 @@ $addField[<:user:1294116672403410955> Configurar Cargos;-# - Configure os cargos
 $addField[<:notebook:1294115108384935936> Configurar Wikis;-# - Ajuste o sistema de wikis no servidor para disponibilizar informações, regras e guias úteis diretamente na plataforma.]
 $addField[<:menudotsvertical:1294115102496260218> Outros;-# - Personalize outras funcionalidades do sistema, como o estilo do addbot, além de diversos ajustes que garantem a adaptação perfeita para o servidor.]
 
-$color[$getServerVar[color]]
+$color[$getVar[color]]
 
 $textSplit[$getUserVar[botlist;$botID];/]
 $addButton[no;$authorID/botlist/config/canais;Configurar Canais;danger;no;<:hastag:1294115110310117456>]
