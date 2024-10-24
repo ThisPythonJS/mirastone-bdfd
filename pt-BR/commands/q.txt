@@ -1,4 +1,3 @@
-$onlyIf[$or[q==$var[m2];queue==$var[m2]]==true;]
 $onlyIf[$guildID!=;( <:errado:1292312941030277200> ) - <@$authorID>, esse comando só pode ser usado em servidores.]
 $onlyIf[$hasRole[$authorID;$textSplit[$getServerVar[botlist];/]$splitText[10]]==true;( <:errado:1292312941030277200> ) - <@$authorID>, você não é um `verificador` para utilizar esse comando.]
 
