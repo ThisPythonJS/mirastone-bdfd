@@ -1,0 +1,18 @@
+$nomention
+$onlyIf[$guildID!=;( <:errado:1292312941030277200> ) - <@$authorID>, esse comando só pode ser usado em servidores.]
+$onlyPerms[admin;( <:errado:1292312941030277200> ) - <@$authorID>, infelizmente você não tem permissão de `administrador` para utilizar esse coamando!]
+
+$title[Configuração do Sistema de Botlist]
+$addField[<:hastag:1294115110310117456> Configurar Canais;-# - Configure os canais de addbot, correios, logs, votos, dentre outros no sistema de botlist.]
+$addField[<:user:1294116672403410955> Configurar Cargos;-# - Configure os cargos de desenvolvedor, bot em análise, verificador, entre outros papéis importantes para o gerenciamento eficaz da botlist.]
+$addField[<:notebook:1294115108384935936> Configurar Wikis;-# - Ajuste o sistema de wikis no servidor para disponibilizar informações, regras e guias úteis diretamente na plataforma.]
+$addField[<:menudotsvertical:1294115102496260218> Outros;-# - Personalize outras funcionalidades do sistema, como o estilo do addbot, além de diversos ajustes que garantem a adaptação perfeita para o servidor.]
+
+$color[$getServerVar[color]]
+
+$textSplit[$getUserVar[botlist;$botID];/]
+$addButton[no;$authorID/botlist/config/canais;Configurar Canais;danger;no;<:hastag:1294115110310117456>]
+$addButton[no;$authorID/botlist/config/cargos;Configurar Cargos;danger;no;<:user:1294116672403410955>]
+$addButton[no;$authorID/botlist/config/wikis;Configurar Wikis;danger;no;<:notebook:1294115108384935936>]
+$addButton[no;$authorID/botlist/config/outros;Outros;danger;no;<:menudotsvertical:1294115102496260218>]
+$addButton[yes;$authorID/botlist/config/sistem;Sistema ( $if[$splitText[1]!=]Ligado$elseif[$splitText[1]==]Desligado$endif );secondary;no;$if[$splitText[1]!=]<:IconSwitchIconOnGreen:1294715848367276065>$elseif[$splitText[1]==]<:IconSwitchIconOff:1294716677254152214>$endif]
