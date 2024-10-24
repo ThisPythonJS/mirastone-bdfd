@@ -1,4 +1,6 @@
 $onlyIf[$guildID!=;( <:errado:1292312941030277200> ) - <@$authorID>, esse comando só pode ser usado em servidores.]
+$onlyIf[$textSplit[$getUserVar[botlist;$botID];/]$splitText[1]!=;( <:errado:1292312941030277200> ) - <@$authorID>, o sistema de **botlist** desse servidor está desligado! $if[$isAdmin[$authorID]==true]use o comando `$getServerVar[prefix]botlist` para ativar o sistema de botlist.$endif]
+
 $onlyIf[$hasRole[$authorID;$textSplit[$getServerVar[botlist];/]$splitText[10]]==true;( <:errado:1292312941030277200> ) - <@$authorID>, você não é um `verificador` para utilizar esse comando.]
 
 $textSplit[$getServerVar[queue];/]
