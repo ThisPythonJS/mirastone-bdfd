@@ -10,7 +10,7 @@ $textSplit[$getUserVar[bot;$var[id]];/]
 $title[<:list:1291983545455218721> - $username[$var[id]] ( $var[v]/$var[w] )]
 $description[
 ``1° `` | ID: **$var[id]**
-``2° `` | Dono: `$username[$splitText[2]]**
+``2° `` | Dono: **$username[$splitText[2]]**
 ``3° `` | Prefix/Slash: **$splitText[4]/$if[$splitText[3]==true]Sim$elseif[$splitText[3]==false]Não$endif**
 ``4° `` | Enviado: <t:$splitText[5]>
 ``5° `` | Descrição: **$getUserVar[desc;$var[id]]**
