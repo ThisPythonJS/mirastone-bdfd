@@ -1,14 +1,11 @@
 $nomention 
 
-$if[$guildID==] $reply
-( <:errado:1292312941030277200> ) - <@$authorID>, esse comando só pode ser usado em servidores. $stop $endif
-$if[$textSplit[$getUserVar[botlist;$botID];/]$splitText[1]==] $reply
-( <:errado:1292312941030277200> ) - <@$authorID>, o sistema de **botlist** desse servidor está desligado! $if[$isAdmin[$authorID]==true]use o comando `$getServerVar[prefix]botlist` para ativar o sistema de botlist.$endif $stop $endif
+$onlyIf[$guildID!=;( <:errado:1292312941030277200> ) - <@$authorID>, esse comando só pode ser usado em servidores.]
+$onlyIf[$textSplit[$getUserVar[botlist;$botID];/]$splitText[1]!=;( <:errado:1292312941030277200> ) - <@$authorID>, o sistema de **botlist** desse servidor está desligado! $if[$isAdmin[$authorID]==true]use o comando `$getServerVar[prefix]botlist` para ativar o sistema de botlist.$endif]
 
 $textSplit[$getUserVar[botlist;$serverOwner];/]
 $if[$splitText[9]!=]
-$if[$textSplit[$getUserVar[botlist;$botID];/]$splitText[1]!=$channelID] $reply
-( <:errado:1292312941030277200> ) - <@$authorID>, esse comando não só pode ser utilizado em <#$splitText[1]> $stop $endif
+$onlyIf[$textSplit[$getUserVar[botlist;$botID];/]$splitText[1]==$channelID;( <:errado:1292312941030277200> ) - <@$authorID>, esse comando não só pode ser utilizado em <#$splitText[1]> ]
 
 $title[Enviando Aplicação ( 0/4 )]
 $description[> Envie o ID da sua aplicação aqui no canal!]
