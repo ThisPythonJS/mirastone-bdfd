@@ -19,6 +19,7 @@ $addField[Informações:;
 ⭐ **$getUserVar[votos;$var[id]] votos** | 🎖️ **#$getLeaderboardPosition[user;votos;desc;$var[id]]**]
 $color[$getUserVar[color;$var[id]]]
 
+$var[x;$if[$authorID==$splitText[2]]no$elseif[$authorID==$splitText[2]]yes$endif]
 
-$addButton[no;$authorID/bot/edit/$var[id];Editar Informações;secondary;no;<:Editar:1299179568242098206>]
+$addButton[no;$authorID/bot/edit/$var[id];Editar Informações;secondary;$var[x];<:Editar:1299179568242098206>]
 $addButton[no;https://discordapp.com/oauth2/authorize?client_id=$var[id]&scope=bot&permissions=0;Me Adicione;link;no]
