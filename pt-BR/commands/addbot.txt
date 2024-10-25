@@ -18,4 +18,4 @@ $title[Embed Addbot]
 $description[> Envie a embed no seu canal de addbot, caso não queira que seu addbot seja nessa estilo use o comando `$getServerVar[prefix]botlist` e aperte o botão `Outros` para configurar.]
 $color[$getServerVar[color]]
 
-$addButton[no;$authorID/addbot/config/embed;Enviar Embed do Addbot;danger;no;]
+$addButton[no;$authorID/addbot/config/embed;Enviar Embed do Addbot;primary;no;]
