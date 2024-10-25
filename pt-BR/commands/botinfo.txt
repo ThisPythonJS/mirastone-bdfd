@@ -1,6 +1,6 @@
 $title[Minhas Informações]
 
-$description[- Olá! Eu sou o **Mirastone**, seu bot de um sistema Avancado de botlist, pronto para tornar seu servidor de botlist incrível! Desenvolvido no :bdfd: **[Bot Designer for Discord](https://app.botdesignerdiscord.com/)**, estou em **$serverCount** servidores e ajudo a entreter **$allMembersCount** usuários!
+$description[- Olá! Eu sou o **Mirastone**, seu bot de um sistema Avancado de botlist, pronto para tornar seu servidor de botlist incrível! Desenvolvido no <:bdfd:1299167029101723668> **[Bot Designer for Discord\](https://app.botdesignerdiscord.com/)**, estou em **$serverCount** servidores e ajudo a entreter **$allMembersCount** usuários!
 
 - Minha missão é tentar oferecer uma experiência única com categorias como **Moderação**, e claro o sistema de **Botlist** e um sistema de **Economia** para engajar todos!
 
