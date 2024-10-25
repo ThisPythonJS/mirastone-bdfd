@@ -12,7 +12,7 @@ $description[$getUserVar[desc;$var[id]]]
 $addField[Informações:;
 - Desenvolvedor: [**@$username[$splitText[2]]**\](https://discord.com/users/$splitText[2])
 - Prefixo: **$if[$splitText[4]!=]$splitText[4]$elseif[$splitText[4]==]Nenhum$endif**
-- Slash: **$replaceText[$replaceText[$splitText[3];true;Sim]false;Não]**
+- Slash: **$replaceText[$replaceText[$splitText[3];true;Sim;1]false;Não;1]**
 - Aprovado: <t:$splitText[6]:>
 ⭐ **$getUserVar[votos;$var[id]] votos** | 🎖️ **#$getLeaderboardPosition[user;votos;desc;$var[id]]**]
 
