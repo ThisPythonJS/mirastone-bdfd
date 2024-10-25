@@ -1,5 +1,9 @@
 {
   "ajuda": ["help","comandos","cmds"],
   "vote": ["votar","v"],
-  "analisar": ["an","analise","análisar","análise"]
+  "analisar": ["an","analise","análisar","análise"],
+  "queue": ["q","espera"],
+  "botinfo": ["bi","infobot"],
+  "botlist": ["config-botlist"],
+  "rank": ["top","r"],
 }
