@@ -3,12 +3,12 @@ $onlyIf[$textSplit[$getUserVar[botlist;$botID];/]$splitText[1]!=;( <:errado:1292
 $onlyIf[$hasRole[$authorID;$textSplit[$getServerVar[botlist];/]$splitText[10]]==true;( <:errado:1292312941030277200> ) - <@$authorID>, você não é um `verificador` para utilizar esse comando.]
 
 $textSplit[$getServerVar[queue];/]
-$onlyIf[$splitText[1]!=;( <:errado:1292312941030277200> › <@$authorID>, não há nenhuma aplicação na lista de espera nesse momento.]
+$onlyIf[$splitText[1]!=;( <:errado:1292312941030277200> ) - <@$authorID>, não há nenhuma aplicação na lista de espera nesse momento.]
 $var[w;$getTextSplitLength]
 $var[v;1] $var[id;$splitText[$var[v]]]
 $textSplit[$getUserVar[bot;$var[id]];/]
 
-$title[<:list:1291983545455218721> - $username[$var[id]] ( $var[v]/$var[w] )]
+$title[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$splitText[7];1;<:bdfd:1299167029101723668>];2;<:javascript:1299167123276562443>];3;<:aoijs:1299167090896535562>];4;<:python:1299167068691628043>];5;<:outros:1299168967298121830>] - $username[$var[id]] ( $var[v]/$var[w] )]
 $description[
 ``1° `` | ID: **$var[id]**
 ``2° `` | Dono: **$username[$splitText[2]]**
