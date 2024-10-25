@@ -4,6 +4,6 @@
   "analisar": ["an","analise","análisar","análise"],
   "queue": ["q","espera"],
   "botinfo": ["bi","infobot"],
-  "botlist": ["config-botlist"],
+  "botlist": ["config-botlist","botlist-config"],
   "rank": ["top","r"],
 }
