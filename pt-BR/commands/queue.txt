@@ -8,7 +8,7 @@ $var[w;$getTextSplitLength]
 $var[v;1] $var[id;$splitText[$var[v]]]
 $textSplit[$getUserVar[bot;$var[id]];/]
 
-$title[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$splitText[7];1;<:bdfd:1299167029101723668>];2;<:javascript:1299167123276562443>];3;<:aoijs:1299167090896535562>];4;<:python:1299167068691628043>];5;<:outros:1299168967298121830>] - $username[$var[id]] ( $var[v]/$var[w] )]
+$title[$if[$splitText[7]==1]<:bdfd:1299167029101723668>$endif$if[$splitText[7]==2]<:javascript:1299167123276562443>$endif$if[$splitText[7]==3]<:aoijs:1299167090896535562>$endif$if[$splitText[7]==4]<:python:1299167068691628043>$endif$if[$splitText[7]==5]<:outros:1299168967298121830>$endif - $username[$var[id]] ( $var[v]/$var[w] )]
 $description[
 ``1° `` | ID: **$var[id]**
 ``2° `` | Dono: **$username[$splitText[2]]**
