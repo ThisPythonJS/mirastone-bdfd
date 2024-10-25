@@ -1,0 +1,57 @@
+$var[type;$toLowercase[$message[2]]]
+$onlyIf[$var[type]!=;( <:errado:1292312941030277200> ) - <@$authorID>, você esqueceu de especificar o tipo do rank que quer ver.]
+$onlyIf[$textSplit[$getUserVar[botlist;$botID];/]$splitText[1]!=;( <:errado:1292312941030277200> ) - <@$authorID>, o sistema de **botlist** desse servidor está desligado! $if[$isAdmin[$authorID]==true]use o comando `$getServerVar[prefix]botlist` para ativar o sistema de botlist.$endif]
+
+$if[$or[$var[type]==v;$var[type]==vote;$var[type]==votos;$var[type]==voto]==true]
+
+$var[top-1;$getLeaderboardValue[user;votos;asc;1;id]]
+$var[top-2;$getLeaderboardValue[user;votos;asc;2;id]]
+$var[top-3;$getLeaderboardValue[user;votos;asc;3;id]]
+$var[top-4;$getLeaderboardValue[user;votos;asc;4;id]]
+$var[top-5;$getLeaderboardValue[user;votos;asc;5;id]]
+
+$onlyIf[$var[top-1]!=;( <:errado:1292312941030277200> ) - <@$authorID>, não há aplicações no rank de votos no momento.]
+        
+$color[$getVar[color]]
+$title[⭐ Rank Votos]
+$description[
+$var[i;1]**#01** - **$username[$var[top-$var[i]]]**
+-# **$getUserVar[votos;$var[top-$var[i]]]** votos | [Me Adicione\](https://discordapp.com/oauth2/authorize?client_id=$var[top-$var[i]]&scope=bot&permissions=2146958847)
+$var[i;2]$if[$var[top-$var[i]]!=]**#02** - **$username[$var[top-$var[i]]]**
+-# **$getUserVar[votos;$var[top-$var[i]]]** votos | [Me Adicione\](https://discordapp.com/oauth2/authorize?client_id=$var[top-$var[i]]&scope=bot&permissions=2146958847)$endif
+$var[i;3]$if[$var[top-$var[i]]!=]**#03** - **$username[$var[top-$var[i]]]**
+-# **$getUserVar[votos;$var[top-$var[i]]]** votos | [Me Adicione\](https://discordapp.com/oauth2/authorize?client_id=$var[top-$var[i]]&scope=bot&permissions=2146958847)$endif
+$var[i;4]$if[$var[top-$var[i]]!=]**#04** - **$username[$var[top-$var[i]]]**
+-# **$getUserVar[votos;$var[top-$var[i]]]** votos | [Me Adicione\](https://discordapp.com/oauth2/authorize?client_id=$var[top-$var[i]]&scope=bot&permissions=2146958847)$endif
+$var[i;5]$if[$var[top-$var[i]]!=]**#05** - **$username[$var[top-$var[i]]]**
+-# **$getUserVar[votos;$var[top-$var[i]]]** votos | [Me Adicione\](https://discordapp.com/oauth2/authorize?client_id=$var[top-$var[i]]&scope=bot&permissions=2146958847)$endif
+]
+
+$endif
+
+$if[$or[$var[type]==an;$var[type]==analisadores;$var[type]==analises;$var[type]==análises]==true]
+
+$var[top-1;$getLeaderboardValue[user;coin;asc;1;id]]
+$var[top-2;$getLeaderboardValue[user;coin;asc;2;id]]
+$var[top-3;$getLeaderboardValue[user;coin;asc;3;id]]
+$var[top-4;$getLeaderboardValue[user;coin;asc;4;id]]
+$var[top-5;$getLeaderboardValue[user;coin;asc;5;id]]
+
+$onlyIf[$var[top-1]!=;( <:errado:1292312941030277200> ) - <@$authorID>, não há verificadores no rank de análises no momento.]
+        
+$color[$getVar[color]]
+$title[⭐ Rank Verificadores]
+$description[
+$var[i;1]**#01** - **$username[$var[top-$var[i]]]**
+-# **$getUserVar[coin;$var[top-$var[i]]]** análises | Ultima análise em <t:$getUserVar[prefix;$var[top-$var[i]]]:f>
+$var[i;2]$if[$var[top-$var[i]]!=]**#02** - **$username[$var[top-$var[i]]]**
+-# **$getUserVar[coin;$var[top-$var[i]]]** análises | Ultima análise em <t:$getUserVar[prefix;$var[top-$var[i]]]:f>$endif
+$var[i;3]$if[$var[top-$var[i]]!=]**#03** - **$username[$var[top-$var[i]]]**
+-# **$getUserVar[coin;$var[top-$var[i]]]** análises | Ultima análise em <t:$getUserVar[prefix;$var[top-$var[i]]]:f>$endif
+$var[i;4]$if[$var[top-$var[i]]!=]**#04** - **$username[$var[top-$var[i]]]**
+-# **$getUserVar[coin;$var[top-$var[i]]]** análises | Ultima análise em <t:$getUserVar[prefix;$var[top-$var[i]]]:f>$endif
+$var[i;5]$if[$var[top-$var[i]]!=]**#05** - **$username[$var[top-$var[i]]]**
+-# **$getUserVar[coin;$var[top-$var[i]]]** análises | Ultima análise em <t:$getUserVar[prefix;$var[top-$var[i]]]:f>$endif
+]
+
+$endif
