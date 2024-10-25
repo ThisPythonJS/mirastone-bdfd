@@ -11,8 +11,8 @@ $addField[<:menudotsvertical:1294115102496260218> Outros;-# - Personalize outras
 $color[$getVar[color]]
 
 $textSplit[$getUserVar[botlist;$botID];/]
-$addButton[no;$authorID/botlist/config/canais;Configurar Canais;danger;no;<:hastag:1294115110310117456>]
-$addButton[no;$authorID/botlist/config/cargos;Configurar Cargos;danger;no;<:user:1294116672403410955>]
-$addButton[no;$authorID/botlist/config/wikis;Configurar Wikis;danger;no;<:notebook:1294115108384935936>]
-$addButton[no;$authorID/botlist/config/outros;Outros;danger;no;<:menudotsvertical:1294115102496260218>]
+$addButton[no;$authorID/botlist/config/canais;Configurar Canais;primary;no;<:hastag:1294115110310117456>]
+$addButton[no;$authorID/botlist/config/cargos;Configurar Cargos;primary;no;<:user:1294116672403410955>]
+$addButton[no;$authorID/botlist/config/wikis;Configurar Wikis;primary;no;<:notebook:1294115108384935936>]
+$addButton[no;$authorID/botlist/config/outros;Outros;primary;no;<:menudotsvertical:1294115102496260218>]
 $addButton[yes;$authorID/botlist/config/sistem;Sistema ( $if[$splitText[1]!=]Ligado$elseif[$splitText[1]==]Desligado$endif );secondary;no;$if[$splitText[1]!=]<:IconSwitchIconOnGreen:1294715848367276065>$elseif[$splitText[1]==]<:IconSwitchIconOff:1294716677254152214>$endif]
