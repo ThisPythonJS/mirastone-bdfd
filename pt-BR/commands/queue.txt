@@ -13,7 +13,7 @@ $description[
 ``1° `` | ID: **$var[id]**
 ``2° `` | Dono: **$username[$splitText[2]]**
 ``3° `` | Prefix/Slash: **$splitText[4]/$if[$splitText[3]==true]Sim$elseif[$splitText[3]==false]Não$endif**
-``4° `` | Enviado: <t:$splitText[5]>
+``4° `` | Enviado: <t:$splitText[5]:f>
 ``5° `` | Descrição: **$getUserVar[desc;$var[id]]**
 ]
 $thumbnail[$userAvatar[$var[id]]]
