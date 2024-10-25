@@ -18,7 +18,7 @@ $addField[Informações:;
 - Aprovado: <t:$splitText[6]:f>
 ⭐ **$getUserVar[votos;$var[id]] votos** | 🎖️ **#$getLeaderboardPosition[user;votos;desc;$var[id]]**;no;1]
 $color[$getUserVar[color;$var[id]];1]
-$color[$getUserVar[color;$var[id]];2]
+
 
 $addButton[no;$authorID/bot/edit;Editar Informações;secondary;no;<:Editar:1299179568242098206>]
 $addButton[no;https://discordapp.com/oauth2/authorize?client_id=$var[id]&scope=bot&permissions=0;Me Adicione;link;no]
