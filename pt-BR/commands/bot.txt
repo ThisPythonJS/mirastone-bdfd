@@ -21,5 +21,5 @@ $addField[Informações:;
 $color[$getUserVar[color;$var[id]]]
 
 
-$addButton[no;$authorID/bot/edit;Editar Informações;secondary;no;<:Editar:1299179568242098206>]
+$addButton[no;$authorID/bot/edit/$var[id];Editar Informações;secondary;no;<:Editar:1299179568242098206>]
 $addButton[no;https://discordapp.com/oauth2/authorize?client_id=$var[id]&scope=bot&permissions=0;Me Adicione;link;no]
