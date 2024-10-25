@@ -5,5 +5,5 @@
   "queue": ["q","espera"],
   "botinfo": ["bi","infobot"],
   "botlist": ["config-botlist","botlist-config"],
-  "rank": ["top","r"],
+  "rank": ["top","r"]
 }
