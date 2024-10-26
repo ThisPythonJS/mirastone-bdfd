@@ -13,7 +13,7 @@ $onlyIf[$isBot[$var[id]]==true;( <:errado:1292312941030277200> ) - <@$authorID>,
 $onlyIf[$textSplit[$getUserVar[bot;$var[id]];/]$splitText[1]==2;( <:errado:1292312941030277200> ) - <@$authorID>, a aplicação mencionada ainda não foi registrada em meu sistema.]
 $endif
 $onlyIf[$textSplit[$getUserVar[times];/]$splitText[1]<=$getTimestamp;( <:errado:1292312941030277200> ) - <@$authorID>, você ainda está em cooldown da sua ultima votação, volte ás <t:$splitText[1]:t> para votar novamente!]
-$setUserVar[times;$calculate[$getTimestamp+(4*60*60)]/$splitText[2]/$splitText[3]/$splitText[4]/$splitText[5]/$splitText[6]/$splitText[7]/$splitText[8]/$splitText[9]/$splitText[10];$authorID]
+$setUserVar[times;$calculate[$getTimestamp+(2*60*60)]/$splitText[2]/$splitText[3]/$splitText[4]/$splitText[5]/$splitText[6]/$splitText[7]/$splitText[8]/$splitText[9]/$splitText[10];$authorID]
 
 ( <:CERTO:1292312954619826226> ) - <@$authorID>, você votou com sucesso no bot <@$var[id]>, o dono do bot agradece por isso!
 $if[$var[x]==false]
