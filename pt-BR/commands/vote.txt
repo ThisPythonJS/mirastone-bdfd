@@ -7,8 +7,8 @@ $var[id;$findUser[$splitText[3]]]
 
 $onlyIf[$textSplit[$getUserVar[botlist;$botID];/]$splitText[1]!=;( <:errado:1292312941030277200> ) - <@$authorID>, o sistema de **botlist** desse servidor está desligado! $if[$isAdmin[$authorID]==true]use o comando `$getServerVar[prefix]botlist` para ativar o sistema de botlist.$endif]
 $if[$var[x]==false]
-$var[id;$findUser[$message[1]]]
-$onlyIf[$message[1]!=;( <:errado:1292312941030277200> ) - <@$authorID>, você esqueceu de mencionar uma aplicação.]
+$var[id;$findUser[$message[2]]]
+$onlyIf[$message[2]!=;( <:errado:1292312941030277200> ) - <@$authorID>, você esqueceu de mencionar uma aplicação.]
 $onlyIf[$isBot[$var[id]]==true;( <:errado:1292312941030277200> ) - <@$authorID>, mencione uma aplicação para votar.]
 $onlyIf[$textSplit[$getUserVar[bot;$var[id]];/]$splitText[1]==2;( <:errado:1292312941030277200> ) - <@$authorID>, a aplicação mencionada ainda não foi registrada em meu sistema.]
 $endif
