@@ -94,8 +94,9 @@ $var[channel;$findChannel[$message[3]]]
 $onlyIf[$message[3]!=;( <:errado:1292312941030277200> ) - <@$authorID>, mencione um canal para você poder enviar uma wiki.]
 $onlyIf[$serverChannelExists[$var[channel]]==true;( <:errado:1292312941030277200> ) - <@$authorID>, o canal ``$message[3]`` não existe ou não é um canal.]
 $onlyIf[$getChannelVar[wiki;$var[channel]]!=;( <:errado:1292312941030277200> ) - <@$authorID>, mencione um canal que serve para wiki.]
-
 $textSplit[$getChannelVar[wiki;$var[channel]];/]
+$onlyIf[$splitText[6]!=;( <:errado:1292312941030277200> ) - <@$authorID>, a wiki mencionada einda não foi configurada a linguagem aguarde até que configurem.]
+
 $color[$splitText[4]]
 $title[📝 - Enviando Wiki ( $splitText[6] )]
 $description[> Claro! Para enviar uma wiki no servidor, utilize o botão abaixo e compartilhe seu conhecimento com todos. É uma ótima maneira de contribuir para a comunidade e ajudar os outros a aprender mais sobre diversos temas. Vamos lá!]
