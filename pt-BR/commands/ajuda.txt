@@ -6,13 +6,13 @@ $addField[<a:info:1294722328374280273> - Informações:;
 ``- `` | Usuários: **``$numberSeparator[$allMembersCount]``**]
 $addField[🤖 - Botlist:;
 ```
-botlist  | analisar  | rank an
-addbot   | vote      | rank v
-queue    | bot       | wiki
+botlist | analisar | rank an
+addbot  | vote     | rank v
+queue   | bot      | wiki
 ```]
 $addField[✨ - Utilidade:;
 ```
-ajuda    | avatar    | botinfo
+ajuda   | avatar   | botinfo
 
 ```]
 
