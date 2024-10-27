@@ -3,7 +3,7 @@ $nomention
 $reply
 $var[id;$findUser[$splitText[3]]]
 $textSplit[$getUserVar[dev];/]
-$var[x;$if[$splitText[3]==$username[$var[id]]]true$elseif[$splitText[3]!=$username[$var[id]]]false$endif]
+$var[x;$if[$splitText[3]!=]true$elseif[$splitText[3]==]false$endif]
 
 $onlyIf[$textSplit[$getUserVar[botlist;$botID];/]$splitText[1]!=;( <:errado:1292312941030277200> ) - <@$authorID>, o sistema de **botlist** desse servidor está desligado! $if[$isAdmin[$authorID]==true]use o comando `$getServerVar[prefix]botlist` para ativar o sistema de botlist.$endif]
 $if[$var[x]==false]
