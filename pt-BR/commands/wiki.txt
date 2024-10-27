@@ -12,16 +12,16 @@ $var[type;$toLowercase[$message[2]]]
 $if[$var[type]==]
 
 $reply
-$title[🗒️ - Wiki]
-$description[Comandos relacionados com meu sistema de wikis.]
-$addField[$getServerVar[prefix]wiki add <channel>;
--# - Adicione um canal o sistemas de wikis.]
-$addField[$getServerVar[prefix]wiki remove <channel>;
--# - Remove um canal o sistema de wikis.]
-$addField[$getServerVar[prefix]wiki config <channel>;
--# - Configura algumas informações de um canal setado para wikis.]
-$addField[$getServerVar[prefix]wiki send <channel>;
--# - Envie uma wiki no servidor.]
+$description[## 📒 - Wiki Info
+> **$username** o comando **``$var[prefix]wiki``** possui aliases onde pode responder com diferentes sistemas, abaixo estarei mostrando todos os aliases e suas funções:
+
+- **``$var[prefix]wiki add/set/setar``** - Adiciona o sistema de wiki de um canal selecionado.
+- **``$var[prefix]wiki remove/delete/deletar/remover``** - Remove o sistema de wiki de um canal selecionado.
+- **``$var[prefix]wiki config/setup/configurar``** - Configura o sistema de wiki de um canal selecionado.
+- **``$var[prefix]wiki send/enviar/postar``** - Envia uma wiki em um canal selecionado.
+
+> Não esqueça de mencionar o canal da wiki por exemplo:
+**``$var[prefix]wiki add <mention/id/name>``**]
 $color[$getVar[color]]
 $stop $endif
 
