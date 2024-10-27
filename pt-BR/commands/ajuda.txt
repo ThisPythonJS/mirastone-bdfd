@@ -1,9 +1,20 @@
-$title[📕 - Lista Comandos Mirastone]
-$description[<:mt_Point:1292221929444475044> Olá, $nickname. Seja bem-vindo à minha seção de ajuda! Aqui você terá uma visão completa dos meus comandos e poderá explorar todas as minhas funcionalidades de forma clara e detalhada.]
-$addField[🤖 | Botlist;`botlist`, `queue`, `addbot`, `analisar`, `vote`, `rank v`, `rank an`, `bot`, `wiki`]
-$addField[✨ | Utilidade;`ajuda`, `avatar`, `botinfo`]
-$footer[Meu prefixo neste servidor é "$var[prefix]"]
-$color[$getVar[color]]
+$description[## 📕 - Painel de Ajuda
+> Olá, **$username**! 👋 Seja muito bem-vindo(a) ao meu painel de ajuda! Eu sou o **$username[$botID]** e estou aqui para te ajudar a explorar meus comandos. Qualquer dúvida, estou à disposição!]
+$addField[<a:info:1294722328374280273> - Informações:;
+``- `` | Prefixo no Servidor: **``m!``**
+``- `` | Servidores: **``$numberSeparator[$serverCount]``**
+``- `` | Usuários: **``$numberSeparator[$allMembersCount]``**]
+$addField[🤖 - Botlist:;
+```
+botlist  | analisar  | rank an
+addbot   | vote      | rank v
+queue    | bot       | wiki
+```]
+$addField[✨ - Utilidade:;
+```
+ajuda    | avatar    | botinfo
 
-$addButton[no;$getBotInvite;Me Adicione;link;no;<:addbot:1292173655295393802>]
-$addButton[no;https://dsc.gg/mirastone-botlist;Suporte;link;no;<:vescudoSuporte:1293017063643938957>]
+```]
+
+$thumbnail[$userAvatar[$botID]]
+$color[$getVar[color]]
