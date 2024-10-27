@@ -15,7 +15,6 @@ $addField[m!wiki config <channel>;
 -# - Configura algumas informações de um canal setado para wikis.]
 $addField[m!wiki send <channel>;
 -# - Envie uma wiki no servidor.]
-$footer[Caso não mencione um canal o canal de onde enviar o comando sera usado.]
 $color[$getVar[color]]
 $stop $endif
 
@@ -23,20 +22,17 @@ $if[$or[$var[type]==add;$var[type]==set;$var[type]==setar]==true]
 
 $var[channel;$findChannel[$message[3]]]
 
-$if[$message[3]!=]
+$onlyIf[$message[3]!=;( <:errado:1292312941030277200> ) - <@$authorID>, mencione um canal para você poder adicionar ao sistema de wiki.]
 $onlyIf[$serverChannelExists[$var[channel]]==true;
 ( <:errado:1292312941030277200> ) - <@$authorID>, o canal ``$message[3]`` não existe ou não é um canal.]
 $onlyIf[$channelType[$var[channel]]==text;
 ( <:errado:1292312941030277200> ) - <@$authorID>, o canal <#$var[channel]> tem que ser um canal de texto comum para poder setar.]
-$elseif[$message[3]==]
-$var[channel;$findChannel[$channelID]]
-$endif
 
 $textSplit[$getChannelVar[wiki;$var[channel]];/]
 $onlyIf[$splitText[1]==;
 ( <:errado:1292312941030277200> ) - <@$authorID>, o canal ``$message[3]`` já possui o sistema de wiki habilitado.]
 
-$sendMessage[( <:CERTO:1292312954619826226> ) - <@$authorID>, o canal <#$var[channel]> foi setado para wiki, utilize `m!wiki config <channel>` para configurar algumas informações.]
+$sendMessage[( <:CERTO:1292312954619826226> ) - <@$authorID>, o canal <#$var[channel]> foi setado para wiki, utilize `m!wiki config <channel>` para configurar algumas informações.;no]
 $setChannelVar[wiki;$var[channel]/✅/❌/$getVar[color]/false/;$var[channel]]
 
 $stop $endif
@@ -45,21 +41,17 @@ $if[$or[$var[type]==remove;$var[type]==delete;$var[type]==deletar;$var[type]==re
 
 $var[channel;$findChannel[$message[3]]]
 
-$if[$message[3]!=]
+$onlyIf[$message[3]!=;( <:errado:1292312941030277200> ) - <@$authorID>, mencione um canal para você poder adicionar ao sistema de wiki.]
 $onlyIf[$serverChannelExists[$var[channel]]==true;
 ( <:errado:1292312941030277200> ) - <@$authorID>, o canal ``$message[3]`` não existe ou não é um canal.]
 $onlyIf[$channelType[$var[channel]]==text;
 ( <:errado:1292312941030277200> ) - <@$authorID>, o canal <#$var[channel]> tem que ser um canal de texto comum para poder remover.]
-$elseif[$message[3]==]
-$var[channel;$findChannel[$channelID]]
-$endif
 
 $textSplit[$getChannelVar[wiki;$var[channel]];/]
 $onlyIf[$splitText[1]!=;
 ( <:errado:1292312941030277200> ) - <@$authorID>, o canal ``$message[3]`` não possui o sistema de wiki habilitado.]
 $setChannelVar[wiki;;$var[channel]]
-
-$sendMessage[( <:CERTO:1292312954619826226> ) - <@$authorID>, o canal <#$var[channel]> foi removido do sistema de wikis.]
+$sendMessage[( <:CERTO:1292312954619826226> ) - <@$authorID>, o canal <#$var[channel]> foi removido do sistema de wikis.;no]
 
 $stop $endif
 
@@ -67,14 +59,11 @@ $if[$or[$var[type]==config;$var[type]==configurar;$var[type]==setup]==true]
 
 $var[channel;$findChannel[$message[3]]]
 
-$if[$message[3]!=]
+$onlyIf[$message[3]!=;( <:errado:1292312941030277200> ) - <@$authorID>, mencione um canal para você poder adicionar ao sistema de wiki.]
 $onlyIf[$serverChannelExists[$var[channel]]==true;
 ( <:errado:1292312941030277200> ) - <@$authorID>, o canal ``$message[3]`` não existe ou não é um canal.]
 $onlyIf[$channelType[$var[channel]]==text;
 ( <:errado:1292312941030277200> ) - <@$authorID>, o canal <#$var[channel]> tem que ser um canal de texto comum para poder configurar.]
-$elseif[$message[3]==]
-$var[channel;$findChannel[$channelID]]
-$endif
 
 $textSplit[$getChannelVar[wiki;$var[channel]];/]
 $onlyIf[$splitText[1]!=;
@@ -128,6 +117,5 @@ $addField[m!wiki config <channel>;
 -# - Configura algumas informações de um canal setado para wikis.]
 $addField[m!wiki send <channel>;
 -# - Envie uma wiki no servidor.]
-$footer[Caso não mencione um canal o canal de onde enviar o comando sera usado.]
 $color[$getVar[color]]
 $stop $endif
