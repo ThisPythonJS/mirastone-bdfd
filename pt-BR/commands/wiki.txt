@@ -1,5 +1,9 @@
 $nomention
 
+$if[$checkContains[$userPerms[$botID;-1;, ];SEND_MESSAGES;ADMINISTRATOR]==false] $ephemeral ( <:errado:1292312941030277200> ) - <@$authorID>, eu não tenho a permissão `SEND_MESSAGES` para usar o sistema de wikis.$stop $endif
+$if[$checkContains[$userPerms[$botID;-1;, ];MANAGE_MESSAGES;ADMINISTRATOR]==false] $ephemeral ( <:errado:1292312941030277200> ) - <@$authorID>, eu não tenho a permissão `MANAGE_MESSAGES` para usar o sistema de wikis.$stop $endif
+$if[$checkContains[$userPerms[$botID;-1;, ];ADD_REACTIONS;ADMINISTRATOR]==false] $ephemeral ( <:errado:1292312941030277200> ) - <@$authorID>, eu não tenho a permissão `ADD_REACTIONS` para usar o sistema de wikis.$stop $endif
+
 $var[type;$toLowercase[$message[2]]]
 
 $if[$var[type]==]
@@ -7,13 +11,13 @@ $if[$var[type]==]
 $reply
 $title[🗒️ - Wiki]
 $description[Comandos relacionados com meu sistema de wikis.]
-$addField[m!wiki add <channel>;
+$addField[$getServerVar[prefix]wiki add <channel>;
 -# - Adicione um canal o sistemas de wikis.]
-$addField[m!wiki remove <channel>;
+$addField[$getServerVar[prefix]wiki remove <channel>;
 -# - Remove um canal o sistema de wikis.]
-$addField[m!wiki config <channel>;
+$addField[$getServerVar[prefix]wiki config <channel>;
 -# - Configura algumas informações de um canal setado para wikis.]
-$addField[m!wiki send <channel>;
+$addField[$getServerVar[prefix]wiki send <channel>;
 -# - Envie uma wiki no servidor.]
 $color[$getVar[color]]
 $stop $endif
@@ -22,6 +26,7 @@ $if[$or[$var[type]==add;$var[type]==set;$var[type]==setar]==true]
 
 $var[channel;$findChannel[$message[3]]]
 
+$onlyPerms[admin;( <:errado:1292312941030277200> ) - <@$authorID>, infelizmente você não tem permissão de `administrador` para utilizar esse coamando!]
 $onlyIf[$message[3]!=;( <:errado:1292312941030277200> ) - <@$authorID>, mencione um canal para você poder adicionar ao sistema de wiki.]
 $onlyIf[$serverChannelExists[$var[channel]]==true;
 ( <:errado:1292312941030277200> ) - <@$authorID>, o canal ``$message[3]`` não existe ou não é um canal.]
@@ -41,6 +46,7 @@ $if[$or[$var[type]==remove;$var[type]==delete;$var[type]==deletar;$var[type]==re
 
 $var[channel;$findChannel[$message[3]]]
 
+$onlyPerms[admin;( <:errado:1292312941030277200> ) - <@$authorID>, infelizmente você não tem permissão de `administrador` para utilizar esse coamando!]
 $onlyIf[$message[3]!=;( <:errado:1292312941030277200> ) - <@$authorID>, mencione um canal para você poder adicionar ao sistema de wiki.]
 $onlyIf[$serverChannelExists[$var[channel]]==true;
 ( <:errado:1292312941030277200> ) - <@$authorID>, o canal ``$message[3]`` não existe ou não é um canal.]
@@ -59,6 +65,7 @@ $if[$or[$var[type]==config;$var[type]==configurar;$var[type]==setup]==true]
 
 $var[channel;$findChannel[$message[3]]]
 
+$onlyPerms[admin;( <:errado:1292312941030277200> ) - <@$authorID>, infelizmente você não tem permissão de `administrador` para utilizar esse coamando!]
 $onlyIf[$message[3]!=;( <:errado:1292312941030277200> ) - <@$authorID>, mencione um canal para você poder adicionar ao sistema de wiki.]
 $onlyIf[$serverChannelExists[$var[channel]]==true;
 ( <:errado:1292312941030277200> ) - <@$authorID>, o canal ``$message[3]`` não existe ou não é um canal.]
@@ -100,7 +107,7 @@ $onlyIf[$splitText[6]!=;( <:errado:1292312941030277200> ) - <@$authorID>, a wiki
 $color[$splitText[4]]
 $title[📝 - Enviando Wiki ( $splitText[6] )]
 $description[> Claro! Para enviar uma wiki no servidor, utilize o botão abaixo e compartilhe seu conhecimento com todos. É uma ótima maneira de contribuir para a comunidade e ajudar os outros a aprender mais sobre diversos temas. Vamos lá!]
-$addButton[no;$authorID/wiki/enviar;Enviar Wiki;primary;no;]
+$addButton[no;$authorID/wiki/enviar/$var[channel];Enviar Wiki;primary;no;]
 $addButton[no;$authorID/wiki/cancel;Cancelar;secondary;no;]
 
 $stop $endif
@@ -110,13 +117,13 @@ $if[$var[type]!=]
 $reply
 $title[🗒️ - Wiki]
 $description[Comandos relacionados com meu sistema de wikis.]
-$addField[m!wiki add <channel>;
+$addField[$getServerVar[prefix]wiki add <channel>;
 -# - Adicione um canal o sistemas de wikis.]
-$addField[m!wiki remove <channel>;
+$addField[$getServerVar[prefix]wiki remove <channel>;
 -# - Remove um canal o sistema de wikis.]
-$addField[m!wiki config <channel>;
+$addField[$getServerVar[prefix]wiki config <channel>;
 -# - Configura algumas informações de um canal setado para wikis.]
-$addField[m!wiki send <channel>;
+$addField[$getServerVar[prefix]wiki send <channel>;
 -# - Envie uma wiki no servidor.]
 $color[$getVar[color]]
 $stop $endif
