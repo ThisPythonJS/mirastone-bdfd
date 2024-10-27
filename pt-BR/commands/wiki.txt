@@ -1,8 +1,11 @@
 $nomention
 
-$if[$checkContains[$userPerms[$botID;-1;, ];SEND_MESSAGES;ADMINISTRATOR]==false] $ephemeral ( <:errado:1292312941030277200> ) - <@$authorID>, eu não tenho a permissão `SEND_MESSAGES` para usar o sistema de wikis.$stop $endif
-$if[$checkContains[$userPerms[$botID;-1;, ];MANAGE_MESSAGES;ADMINISTRATOR]==false] $ephemeral ( <:errado:1292312941030277200> ) - <@$authorID>, eu não tenho a permissão `MANAGE_MESSAGES` para usar o sistema de wikis.$stop $endif
-$if[$checkContains[$userPerms[$botID;-1;, ];ADD_REACTIONS;ADMINISTRATOR]==false] $ephemeral ( <:errado:1292312941030277200> ) - <@$authorID>, eu não tenho a permissão `ADD_REACTIONS` para usar o sistema de wikis.$stop $endif
+$if[$checkContains[$userPerms[$botID;-1;, ];SEND_MESSAGES;ADMINISTRATOR]==false] $ephemeral 
+$sendMessage[( <:errado:1292312941030277200> ) - <@$authorID>, eu não tenho a permissão `SEND_MESSAGES` para usar o sistema de wikis.;no] $stop $endif
+$if[$checkContains[$userPerms[$botID;-1;, ];MANAGE_MESSAGES;ADMINISTRATOR]==false] $ephemeral 
+$sendMessage[( <:errado:1292312941030277200> ) - <@$authorID>, eu não tenho a permissão `MANAGE_MESSAGES` para usar o sistema de wikis.;no] $stop $endif
+$if[$checkContains[$userPerms[$botID;-1;, ];ADD_REACTIONS;ADMINISTRATOR]==false] $ephemeral 
+$sendMessage[( <:errado:1292312941030277200> ) - <@$authorID>, eu não tenho a permissão `ADD_REACTIONS` para usar o sistema de wikis.;no] $stop $endif
 
 $var[type;$toLowercase[$message[2]]]
 
