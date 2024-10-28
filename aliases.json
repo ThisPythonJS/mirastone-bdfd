@@ -7,5 +7,6 @@
   "botlist": ["config-botlist","botlist-config"],
   "rank": ["top","r"],
   "wiki": ["wikis","w"],
-  "atm": ["saldo","miragolds","bal"]
+  "atm": ["saldo","miragolds","bal"],
+  "pay": ["pagar"]
 }
