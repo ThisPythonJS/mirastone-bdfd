@@ -6,5 +6,6 @@
   "botinfo": ["bi","infobot"],
   "botlist": ["config-botlist","botlist-config"],
   "rank": ["top","r"],
-  "wiki": ["wikis","w"]
+  "wiki": ["wikis","w"],
+  "atm": ["saldo","miragolds","bal"]
 }
