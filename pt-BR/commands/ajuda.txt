@@ -15,8 +15,11 @@ $addField[✨ - Utilidade:;
 ajuda   | avatar   | botinfo
 
 ```]
+$addField[<:miragold:1300203386645254154> - Economia:;
+```
+atm
 
-$thumbnail[$userAvatar[$botID]]
+```]
 $color[$getVar[color]]
 
 $addButton[no;$getBotInvite;Me Adicione;link;no;<:addbot:1292173655295393802>]
