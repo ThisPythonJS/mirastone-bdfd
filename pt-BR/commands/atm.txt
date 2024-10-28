@@ -1,0 +1,10 @@
+$nomention
+$var[user;$findUser[$message[2]]]
+
+$reply $botTyping
+
+$title[<:miragold:1300203386645254154> - Miragolds]
+$description[<@$authorID> $if[$authorID==$var[user]]você$elseo usuário <@$var[user]>$endif possui **$numberSeparator[$getVar[coin;$var[id]]] miragolds**, e está na **#$try$getLeaderboardPosition[globalUser;coin;desc;$var[user]]$catch99+$endtry** colocação do ranking!
+Quer conhecer outros usuários ricos? de uma olhada no comando **``$var[prefix]rank``**]
+$thumbnail[$userAvatar[$var[user]]]
+$color[$getVar[color]]
