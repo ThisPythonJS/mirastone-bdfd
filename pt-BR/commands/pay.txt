@@ -4,7 +4,7 @@ $onlyIf[$guildID!=; ]
 
 $var[user;$authorID]
 $var[pessoa-pay;$findUser[$message[1;user]]]
-$var[valor-pay;$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$message[2;valor];k;000];m;000000];b;000000000];t;000000000000];q;000000000000000];all;$getVar[miragolds;$authorID]]]
+$var[valor-pay;$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$message[2;valor];k;000];m;000000];b;000000000];t;000000000000];q;000000000000000];all;$getVar[coin;$authorID]]]
 
 $onlyIf[$isBot[$findUser[$var[pessoa-pay]]]==false;<:errado:1292312941030277200> Não é possível pagar bots!]
 $onlyIf[$isNumber[$var[valor-pay]]==true;<:errado:1292312941030277200> Valor inválido!
