@@ -1,1 +1,32 @@
+$nomention $defer
 
+$onlyIf[$guildID!=; ]
+
+$var[user;$authorID]
+$var[pessoa-pay;$findUser[$message[1;user]]]
+$var[valor-pay;$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$message[2;valor];k;000];m;000000];b;000000000];t;000000000000];q;000000000000000];all;$getVar[miragolds;$authorID]]]
+
+$onlyIf[$isBot[$findUser[$var[pessoa-pay]]]==false;<:errado:1292312941030277200> Não é possível pagar bots!]
+$onlyIf[$isNumber[$var[valor-pay]]==true;<:errado:1292312941030277200> Valor inválido!
+Modo de usar: `m!pagar (quantia) (@user/userID)`]
+$onlyIf[$checkContains[$var[valor-pay];-;--;+;$;&;';";!;?;/;);(;@;#;*;.;,]!=true;<:errado:1292312941030277200> Valor inválido! Tente não colocar símbolos!
+Modo de usar: `m!pagar (quantia) (@user/userID)`]
+$onlyIf[$userExists[$var[pessoa-pay]]==true;<:errado:1292312941030277200> Usuário Inexistente!
+Modo de usar: `m!pagar (quantia) (@user/userID)`]
+$onlyIf[$var[pessoa-pay]!=$authorID;<:errado:1292312941030277200> Não é possível pagar você mesmo!
+Modo de usar: `m!pagar (quantia) (@user/userID)`]
+$onlyIf[$var[valor-pay]>=10;<:errado:1292312941030277200> O valor mínimo para pagar alguém é de **10 moedas**!]
+$onlyIf[$getVar[coin;$authorID]>=$var[valor-pay];<:errado:1292312941030277200> Saldo insuficiente para realizar o pagamento!]
+
+## **💸 - Pagamento!**
+<@$var[pessoa-pay]>, <@$authorID> deseja realizar um pagamento para você no valor de **$numberSeparator[$var[valor-pay];.] miragolds**.
+<a:Timer:1293529296194768896> Para aceitar clique no botão abaixo.
+<:wn:1294989745692086316> Os botões iram parar de funcionar <t:$calculate[$getTimestamp + 300]:R>.
+-# **Lembre-se:** Você não pode trocar os seus Miragolds por itens que possuí valores reais como o Nitro, Dinheiro real, convites, ações ilegais, NSFW (Not safe for work).
+-# **Aviso:** Não use contas secundárias (alt) para conseguir mais Miragolds, isto pode resultar banimento de utilizar o Bot.
+
+$addButton[no;aceitarPay-$var[pessoa-pay]-$authorID-$var[valor-pay]-$random[11111;99999]-$sum[$getTimestamp;300];Aceitar;success;no;<:CERTO:1292312954619826226>]
+$addButton[no;recusarPay-$var[pessoa-pay]-$authorID-$random[11111;99999]-$sum[$getTimestamp;300];Recusar;primary;no;<:errado:1292312941030277200>]
+
+
+$endif
