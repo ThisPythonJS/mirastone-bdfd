@@ -17,7 +17,7 @@ ajuda   | avatar   | botinfo
 ```]
 $addField[<:miragold:1300203386645254154> - Economia:;
 ```
-atm     | pay
+atm     | pay      | daily
 
 ```]
 $color[$getVar[color]]
