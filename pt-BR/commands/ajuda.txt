@@ -23,5 +23,5 @@ atm     | pay      | daily
 $color[$getVar[color]]
 
 $addButton[no;$getBotInvite;Me Adicione;link;no;<:addbot:1292173655295393802>]
-$addButton[no;https://discord.gg/h2GuMy4UKN;Suporte;link;no;<:vescudoSuporte:1293017063643938957>]
+$addButton[no;https://dsc.gg/mirastone-botlist;Suporte;link;no;<:vescudoSuporte:1293017063643938957>]
 $addButton[no;https://top.gg/bot/1291151633916366899;;link;no;<:topgg:1300114821978656779>]
