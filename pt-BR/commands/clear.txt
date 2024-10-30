@@ -2,9 +2,9 @@ $onlyIf[$guildID!=;( <:errado:1292312941030277200> ) - <@$authorID>, esse comand
 $botTyping $nomention
 
 $if[$checkContains[$userPerms[$botID;-1;, ];MANAGE_MESSAGES;ADMINISTRATOR]==false] $ephemeral $reply
-$sendMessage[( <:errado:1292312941030277200> ) - <@$authorID>, eu não tenho a permissão `MANAGE_MESSAGES` para usar o sistema de wikis.;no] $stop $endif
+$sendMessage[( <:errado:1292312941030277200> ) - <@$authorID>, eu não tenho a permissão `MANAGE_MESSAGES` para apagar as mensagens.;no] $stop $endif
 $if[$checkContains[$userPerms[$authorID;-1;, ];MANAGE_MESSAGES;ADMINISTRATOR]==false] $ephemeral $reply
-$sendMessage[( <:errado:1292312941030277200> ) - <@$authorID>, eu não tenho a permissão `MANAGE_MESSAGES` para usar o sistema de wikis.;no] $stop $endif
+$sendMessage[( <:errado:1292312941030277200> ) - <@$authorID>, eu não tenho a permissão `MANAGE_MESSAGES` para apagar as mensagens.;no] $stop $endif
 $if[$message[2]==] $ephemeral $reply
 $sendMessage[( <:errado:1292312941030277200> ) - <@$authorID>, por favor, digite o número de mensagens a serem apagadas!] $stop $endif
 $if[$isNumber[$message[2]]==false] $ephemeral $reply
