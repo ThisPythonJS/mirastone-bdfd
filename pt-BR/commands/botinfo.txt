@@ -8,11 +8,11 @@ $description[
 
 - Minha missão é tentar oferecer uma experiência única com categorias como **Moderação**, e claro o sistema de **Botlist** e um sistema de **Economia** para engajar todos!
 
-- Sou desenvolvido pelos talentosos **<@1264206060986564630>** e pelo **<@955180478305034250>** que buscam sempre melhorias para proporcionar a melhor experiência. Estou sempre evoluindo!
+- Sou desenvolvido pelos talentosos **<@1264206060986564630>**, **<@955180478305034250>** e pelo **<@1280185540590829681> que buscam sempre melhorias para proporcionar a melhor experiência. Estou sempre evoluindo!
 
-> **Inclusive saiu uma atualização muito top veja mais em nosso servidor abaixo!**]
+- Precisa reportar bug? Entre no meu [Servidor de Suporte\](https://dsc.gg/mirastone)]
 $thumbnail[$userAvatar[$botID]] $color[$getVar[color]]
 
 $addButton[no;$getBotInvite;Me Adicione;link;no;<:addbot:1292173655295393802>]
-$addButton[no;https://dsc.gg/mirastone-botlist;Suporte;link;no;<:vescudoSuporte:1293017063643938957>]
+$addButton[no;https://dsc.gg/mirastone;Suporte;link;no;<:vescudoSuporte:1293017063643938957>]
 $addButton[no;https://top.gg/bot/1291151633916366899;;link;no;<:topgg:1300114821978656779>]
